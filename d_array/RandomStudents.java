@@ -21,8 +21,6 @@ public class RandomStudents {
 		int a[];
 		System.out.print("뽑을 인원(1~25)을 입력해주세요.>");
 		choice = Integer.parseInt(sc.nextLine());
-		
-		
 		int select[] =  new int[choice] ;
 				for(int i=0;i<choice;i++){
 					random = (int)(Math.random()*100/4)+1;//1~25생성
@@ -35,12 +33,8 @@ public class RandomStudents {
 								break;
 							}
 						}
-					
-			
-				
 				}
 		System.out.println(Arrays.toString(select));
-
 	}
 
 }
