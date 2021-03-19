@@ -34,6 +34,7 @@ public class RandomStudents {
 							}
 						}
 				}
+				
 		System.out.println(Arrays.toString(select));
 	}
 

@@ -122,10 +122,27 @@ public class Quiz {
 			 */
 			
 			      
+			int[] temp = new int[5];
+			int count = 0;
+			for(int i=0;i<arr.length;i++){
+				boolean flag = true;
+				for(int j=0; j<temp.length;j++){
+					if(arr[i] == temp[j]){
+						flag = false;
+					}
+				}
+				if(flag){
+					temp[count++] = arr[i];
+					
+				}
+				
+			}
 		
-		
-	
-		
+			int[] result = new int[count];
+			for(int i=0;i<result.length;i++){
+				result[i] = temp[i];
+			}
+			System.out.println(Arrays.toString(result));
 		
 		
 		
