@@ -109,42 +109,53 @@ public class Quiz {
 //				System.out.println(" "+ counts[i]);
 //			}
 			
-			//중복되지 않는 배열
-			int[] arr = new int[10];
-			for(int i =0;i<arr.length;i++){
-				arr[i] = (int)(Math.random()*5)+1;
-			}
-			System.out.println(Arrays.toString(arr));
-			/*
-			 * 1~5사이의 랜덤한 값이 10개 저장된 배열에서 중복된 값이 제건된 배열을 만들어주세요.
-			 * [2, 5, 1, 3, 3, 3, 5, 3, 3, 5]
-			 * [2,5,1,3]
-			 */
-			
-			      
-			int[] temp = new int[5];
-			int count = 0;
-			for(int i=0;i<arr.length;i++){
-				boolean flag = true;
-				for(int j=0; j<temp.length;j++){
-					if(arr[i] == temp[j]){
-						flag = false;
-					}
-				}
-				if(flag){
-					temp[count++] = arr[i];
-					
-				}
-				
-			}
+//			//중복되지 않는 배열
+//			int[] arr = new int[10];
+//			for(int i =0;i<arr.length;i++){
+//				arr[i] = (int)(Math.random()*5)+1;
+//			}
+//			System.out.println(Arrays.toString(arr));
+//			/*
+//			 * 1~5사이의 랜덤한 값이 10개 저장된 배열에서 중복된 값이 제건된 배열을 만들어주세요.
+//			 * [2, 5, 1, 3, 3, 3, 5, 3, 3, 5]
+//			 * [2,5,1,3]
+//			 */
+//			
+//			      
+//			int[] temp = new int[5];
+//			int count = 0;
+//			for(int i=0;i<arr.length;i++){
+//				boolean flag = true;
+//				for(int j=0; j<temp.length;j++){
+//					if(arr[i] == temp[j]){
+//						flag = false;
+//					}
+//				}
+//				if(flag){
+//					temp[count++] = arr[i];
+//					
+//				}
+//				
+//			}
+//		
+//			int[] result = new int[count];
+//			for(int i=0;i<result.length;i++){
+//				result[i] = temp[i];
+//			}
+//			System.out.println(Arrays.toString(result));
 		
-			int[] result = new int[count];
-			for(int i=0;i<result.length;i++){
-				result[i] = temp[i];
-			}
-			System.out.println(Arrays.toString(result));
+		int arr[] =new int[100];
+		for(int i=0;i<arr.length;i++){
+			arr[i] = (int)(Math.random()*100)+1;
+		}
 		
-		
+		/*
+		 * 2~5사이의 랜덤함 수로 나누어 떨어지는 숫자로만 이루어진 배열을 출력해주세요.
+		 * 5
+		 * [5,10,15,20,25,30]
+		 * 
+		 * 
+		 */
 		
 		
 		
