@@ -144,10 +144,14 @@ public class Quiz {
 //			}
 //			System.out.println(Arrays.toString(result));
 		
+		Scanner sc= new Scanner(System.in);
 		int arr[] =new int[100];
 		for(int i=0;i<arr.length;i++){
 			arr[i] = (int)(Math.random()*100)+1;
 		}
+		System.out.println(Arrays.toString(arr));
+		
+		
 		
 		/*
 		 * 2~5사이의 랜덤함 수로 나누어 떨어지는 숫자로만 이루어진 배열을 출력해주세요.
@@ -156,6 +160,31 @@ public class Quiz {
 		 * 
 		 * 
 		 */
+		int count=0;
+		int multiple[] =  new int[100];
+		System.out.println("[2 ~ 5]의 나눌 수를 입력해주세요>");
+		int divnum = sc.nextInt();
+		
+		for(int i = 0;i<arr.length;i++){
+			
+			if(arr[i]%divnum == 0){
+				count++;
+				multiple[count-1]=arr[i];
+			}
+		}
+		System.out.println(Arrays.toString(multiple));
+		int c = count;
+		if(count == 0){
+			c = 1;
+		}
+		int res[] =  new int[c];
+		for(int j=0;j<res.length;j++){
+			res[j]=multiple[j];
+		}
+		
+		System.out.println(count);
+		
+		System.out.println(Arrays.toString(res));
 		
 		
 		
