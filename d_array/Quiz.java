@@ -161,35 +161,63 @@ public class Quiz {
 		 * 
 		 * 
 		 */
-		int count=0;
-		int multiple[] =  new int[100];
-		System.out.println("[2 ~ 5]의 나눌 수를 입력해주세요>");
-		int divnum = sc.nextInt();
+
+//내가한것
+//		int count=0;
+//		int multiple[] =  new int[100];
+//		System.out.println("[2 ~ 5]의 나눌 수를 입력해주세요>");
+//		int divnum = sc.nextInt();
+//		
+//		for(int i = 0;i<arr.length;i++){
+//			
+//			if(arr[i]%divnum == 0){
+//				count++;
+//				multiple[count-1]=arr[i];
+//			}
+//		}
+//		System.out.println(Arrays.toString(multiple));
+//		int c = count;
+//		if(count == 0){
+//			c = 1;
+//		}
+//		int res[] =  new int[c];
+//		for(int j=0;j<res.length;j++){
+//			res[j]=multiple[j];
+//		}
+//		
+//		System.out.println("개수 " +count);
+//		
+//		System.out.println(Arrays.toString(res));
 		
-		for(int i = 0;i<arr.length;i++){
-			
-			if(arr[i]%divnum == 0){
-				count++;
-				multiple[count-1]=arr[i];
+//선생님이 한것
+		int[] tempArr = new int[100];
+		int n = (int)(Math.random() * 4) + 2;//2~5사이
+		int count = 0;
+		for(int i = 0; i < arr.length; i++){
+			if(arr[i] % n == 0){
+				tempArr[count++] = arr[i]; //나누어 떨어지는 수 값을 넣어 줌
 			}
 		}
-		System.out.println(Arrays.toString(multiple));
-		int c = count;
-		if(count == 0){
-			c = 1;
-		}
-		int res[] =  new int[c];
-		for(int j=0;j<res.length;j++){
-			res[j]=multiple[j];
+		
+		int[] resultArr = new int[count];//카운트 만큼의 배열 만들기
+		for(int i = 0; i < resultArr.length; i++){
+			resultArr[i] = tempArr[i];
 		}
 		
-		System.out.println(count);
-		
-		System.out.println(Arrays.toString(res));
-		
-		
-		
-		
+		for(int i  = 0; i < resultArr.length - 1; i++){//선택정렬
+			int min = i;
+			for(int j = i + 1; j < resultArr.length; j++){
+				if(resultArr[j] < resultArr[min]){
+					min = j;
+				}
+			}
+			int tmp = resultArr[i];
+			resultArr[i] = resultArr[min];
+			resultArr[min] = tmp;
+		}
+		System.out.println("n : " + n);
+		System.out.println(Arrays.toString(resultArr));
+
 		
 		
 	}
