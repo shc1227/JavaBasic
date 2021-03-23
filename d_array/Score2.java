@@ -130,7 +130,7 @@ public class Score2 {
 
 		}
 
-		
+		//주의
 
 		for(int i = 0; i < nameSum.length - 1; i++){
 
