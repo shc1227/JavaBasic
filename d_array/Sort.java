@@ -7,7 +7,7 @@ public class Sort {
 	public static void main(String[] args) {
 		/*
 		 * 석차구하기 : 점수를 비교해 작은 점수의 등수를 증가시키는 방식
-		 * 선택정렬 : 가장 작은 숫자르 찾아서 앞으로 보내는 방식
+		 * 선택정렬 : 가장 작은 숫자를 찾아서 앞으로 보내는 방식
 		 * 버블정렬 : 바로 뒤의 숫자와 비교해서 큰 수를 뒤로 보내는 방식
 		 * 삽입정렬 : 두번째 숫자부터 앞의 숫자들과 비교해서 큰수를 뒤로 밀고 중간에 삽입한는 방식
 		 * 
@@ -53,21 +53,33 @@ public class Sort {
 		 * 8,9
 		 */
 		
-		for(int i = 0; i<arr.length-1;i++){
-			int minNUM =i;
-			for(int j=i+1;j<arr.length;j++){
-				if(arr[j]<arr[minNUM]){
-					minNUM=j;
-				}
+//		for(int i = 0; i<arr.length-1;i++){
+//			int minNUM =i;
+//			for(int j=i+1;j<arr.length;j++){
+//				if(arr[j]<arr[minNUM]){
+//					minNUM=j;
+//				}
+//			}
+//			int tempor = arr[i];
+//			arr[i] = arr[minNUM];
+//			arr[minNUM] = tempor;
+//		}
+//		System.out.println("선택정렬 :"+Arrays.toString(arr));
+	
+	for(int i=0;i<arr.length;i++){
+		int min =i;
+		for(int j=i+1;j<arr.length;j++){
+			if(arr[j]<arr[min]){
+				min = j;
+				
 			}
-			int tempor = arr[i];
-			arr[i] = arr[minNUM];
-			arr[minNUM] = tempor;
+			int temp = arr[i];
+			arr[i] = arr[min];
+			arr[min] = temp;
 		}
-		System.out.println("선택정렬 :"+Arrays.toString(arr));
-	
-	
-	
+		
+	}
+	System.out.println("선택정렬 :"+Arrays.toString(arr));
 	
 		/*버블정렬*/
 		/*
@@ -87,7 +99,7 @@ public class Sort {
 			boolean flag =true;
 			
 			for(int j=0;j<arr.length-1-i ;j++ ){
-				if(arr[j]>arr[j+1]){
+				if(arr[j+1]<arr[j]){
 					int temp=arr[j];
 					arr[j] = arr[j+1];
 					arr[j+1] =temp;
