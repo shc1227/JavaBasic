@@ -63,10 +63,10 @@ public class oven {
 		oven o = new oven();
 		
 		while(true){
-			System.out.println("-------------------------------");
-			System.out.println("1.전원  2.온도변경  3.온도업  4.온도다운");
-			System.out.println("5.시간설정  6.시간업 7.시간다운  0.종료");
-			System.out.println("-------------------------------");
+			System.out.println("┌────────────────────────────────┐");
+			System.out.println("│1.전원  2.온도변경  3.온도업  4.온도다운 	 │ ");
+			System.out.println("│5.시간설정  6.시간업 7.시간다운  0.종료 	 │");
+			System.out.println("└────────────────────────────────┘");
 			System.out.print("번호 입력>");
 			int input = ScanUtil.nextInt();
 			
