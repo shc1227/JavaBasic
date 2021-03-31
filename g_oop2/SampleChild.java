@@ -43,14 +43,15 @@ public class SampleChild extends SampleParent {
 		//SampleChild2
 		//SampleChild3
 		
-		sc = (SampleChild)sp;
-		sp = (SampleParent)sc;
+		//sc = (SampleChild)sp;
+		//sp = (SampleParent)sc;
 		//자식타입 -> 부모타입 형변환은 생략이 가능하다.
 		
-		sc = (SampleChild)new SampleParent();	//O
+		//sc = (SampleChild)new SampleParent();	//O
 		//sc = new SampleParent();				//X
-		sp = (SampleParent)new SampleChild();	//O
-		sp = new SampleChild();					//O
+		//sp = (SampleParent)new SampleChild();	//O
+		//sp = new SampleChild();					//O
+		System.out.println(sp.method(6, 2));
 		
 	}
 	
