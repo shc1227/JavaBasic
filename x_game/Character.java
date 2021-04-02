@@ -1,6 +1,6 @@
 package x_game;
 
-public interface Character {//인터메스를 통행 캐릭터의 기본 추상클래스를 생성하였습니다. 
+public interface Character {//인터페이스를 통행 캐릭터의  추상메서드를 생성하였습니다. 
 	 void eat();			//먹이주기 메서드	
      void sleep();			//잠재우기 메서드
      void play();			//놀아주기 메서드

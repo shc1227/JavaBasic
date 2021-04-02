@@ -2,10 +2,10 @@ package x_game;
 
 import e_oop.ScanUtil;
 
-public class Dog implements Character{
+public class Dog2 implements Character{
 	 int experience=0; 					//경험치
-     int energy=50;						//체력
-     int level=1;						//레벨
+     int energy=100;					//체력
+     int level=5;						//레벨
      String state ="어리숙함";				//훈련상태
      boolean success = false;			//훈련 성공여부
      int probability;					//훈련 확률
@@ -124,26 +124,26 @@ public class Dog implements Character{
             switch (select) {
             case "1":
            	 energy -= 40;
-           	experience += 100;
+           	experience += 50;
            	 System.out.println("┏");
            	 System.out.println(" \"달리기가 능숙해졌습니다. 멍멍!!\"");
-             System.out.println(" [체력↓ -40 / 경험치↑ +100]");
+             System.out.println(" [체력↓ -40 / 경험치↑ +50]");
            	 System.out.println("\t\t\t┛");
                 break;
             case "2":
            	 energy -= 20;
-           	experience += 80;
+           	experience += 20;
            	 System.out.println("┏");
            	 System.out.println(" \"조금은 능숙해졌다. 멍멍!!\"");
-           	System.out.println(" [체력↓ -20 / 경험치↑ +80]");
+           	System.out.println(" [체력↓ -20 / 경험치↑ +20]");
            	 System.out.println("\t\t\t┛");
                 break;
             case "3":
         	 energy -= 20;
-        	 experience += 50;
+        	 experience += 10;
            	 System.out.println("┏");
            	 System.out.println(" \"애교를 부립니다.\"");
-           	System.out.println(" [체력↓ -20 / 경험치↑ +50]");
+           	System.out.println(" [체력↓ -20 / 경험치↑ +10]");
            	 System.out.println("\t\t\t┛");
                 break;
             default:
@@ -220,11 +220,11 @@ public class Dog implements Character{
 			
 		    System.out.println("─────────────────────");
 		    System.out.println("	정보");
-	        System.out.println("  견종 	: 포메리안	   ");		
-	        System.out.println("  경험치 	: "+experience);
-	        System.out.println("  체력 	: "+energy);
-	        System.out.println("  상태 	: "+state);
-	        System.out.println(" level	: "+level);
+	        System.out.println("  견종 	: 시츄	   ");		
+	        System.out.println("  경험치 	: "+experience+"\t\t");
+	        System.out.println("  체력 	: "+energy+"\t\t");
+	        System.out.println("  상태 	: "+state+"\t\t");
+	        System.out.println(" level	: "+level+"\t\t");
 	        System.out.println("─────────────────────");
 		
 	}

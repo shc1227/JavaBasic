@@ -11,11 +11,11 @@ public class ThrowException {
 		 * 
 		 */
 		
-		try {
-			throw new IOException("예외가 발생한 이유를 만들자");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			throw new IOException("예외가 발생한 이유를 만들자");
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		
 		
 		
