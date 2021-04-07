@@ -23,67 +23,67 @@ public class HashMapClass {
 		 *
 		 */
 		//키는 String 타입, 값은 지정하고싶은 타입으로 저장가능
-//		HashMap<String, Object> map = new HashMap<>();
-//		
-//		map.put("name", "홍길동");
-//		map.put("date", new Date());
-//		map.put("age",10);
-//		
-//		
-//		map.put("date", new Date());
-//		
-//		System.out.println(map);//저장한 순서로 출력되지는 않는다.
-//		System.out.println("1----");
-//		map.put("name", "이순신");
-//		
-//		System.out.println(map);
-//		System.out.println("2----");
-//		map.remove("age");
-//		System.out.println(map);
-//		System.out.println("3----");
-//		
-//		Object value = map.get("name");
-//		System.out.println(value);//현재 object 타입으로 꺼내졌다.
-//		
-//		String str = (String)map.get("name");
-//		System.out.println(str);//String 타입으로 꺼내기 위해서는
-//		
-//		System.out.println("4----");
-//		
-////		Set<String> keys =  map.keySet();  //set은 중복된 값을 허용하지 않는다.값을 하나씩 꺼낼수 있는 메서드 없다.
-////		System.out.println(keys);
-////		
-////		
-////		for(String key : keys){//향상된 for문
-////			System.out.println(key+" : "+map.get(key));
-////		}
-//		
-//		
-//		
-//		HashMap<String, Object> row = new HashMap<>();
-//		row.put("id", "admin");
-//		row.put("password", "admin123");
-//		row.put("name", "관리자");
-//		row.put("tel", "010-1234-5678");
-//		
-//		
-//		
-//		ArrayList<HashMap<String, Object>> table = new ArrayList<>();
-//		table.add(row);
-//		
-//		System.out.println(table);
-//		
-//		//table에 회원 1명의 데이터를 추가해주세요.
-////		row = new HashMap<>();
-//		row.put("id", "admin2");
-//		row.put("password", "admin456");
-//		row.put("name", "영업부");
-//		row.put("tel", "010-4567-8910");
-//		
-//		table.add(row);
-//		
-//		System.out.println(table);
+		HashMap<String, Object> map = new HashMap<>();
 		
+		map.put("name", "홍길동");
+		map.put("date", new Date());
+		map.put("age",10);
+		
+		
+		map.put("date", 11);
+		
+		System.out.println(map);//저장한 순서로 출력되지는 않는다.
+		System.out.println("1----");
+		map.put("name", "이순신");
+		
+		System.out.println(map);
+		System.out.println("2----");
+		map.remove("age");
+		System.out.println(map);
+		System.out.println("3----");
+		
+		Object value = map.get("name");
+		System.out.println(value);//현재 object 타입으로 꺼내졌다.
+		
+		String str = (String)map.get("name");
+		System.out.println(str);//String 타입으로 꺼내기 위해서는
+		
+		System.out.println("4----");
+		
+		Set<String> keys =  map.keySet();  //set은 중복된 값을 허용하지 않는다.값을 하나씩 꺼낼수 있는 메서드 없다.
+		System.out.println(keys);
+		
+		
+		for(String key : keys){//향상된 for문
+			System.out.println(key+" : "+map.get(key));
+		}
+		
+		
+		System.out.println("5----");
+		HashMap<String, Object> row = new HashMap<>();
+		row.put("id", "admin");
+		row.put("password", "admin123");
+		row.put("name", "관리자");
+		row.put("tel", "010-1234-5678");
+		
+		
+		
+		ArrayList<HashMap<String, Object>> table = new ArrayList<>();
+		table.add(row);
+		
+		System.out.println(table);
+		System.out.println("6----");
+		//table에 회원 1명의 데이터를 추가해주세요.
+		row = new HashMap<>();
+		row.put("id", "admin2");
+		row.put("password", "admin456");
+		row.put("name", "영업부");
+		row.put("tel", "010-4567-8910");
+		
+		table.add(row);
+		
+		System.out.println(table);
+		System.out.println("7----");
 		//Lprod
 		
 		
