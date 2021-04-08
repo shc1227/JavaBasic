@@ -1,5 +1,7 @@
 package J_collection;
 
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -26,6 +28,7 @@ public class Board_sem {
 		 */
 		
 		ArrayList<HashMap<String, Object>> boardList = new ArrayList<>();
+		SimpleDateFormat format = new SimpleDateFormat("yy-MM-dd");
 		
 		while(true){
 			System.out.println("------------------------------");
@@ -36,12 +39,12 @@ public class Board_sem {
 				System.out.println(board.get("board_no") + "\t"
 						+ board.get("title") + "\t"
 						+ board.get("user") + "\t"
-						+ board.get("reg_date"));
+						+ format.format(board.get("reg_date")));
 			}
 			System.out.println("------------------------------");
 			System.out.println("1.조회\t2.등록\t0.종료");
 			System.out.print("입력>");
-			int input = ScanUtil.nextInt();
+			int input = ScanUtil.nextInt();  // 숫자 입력
 			
 			switch (input) {
 			case 1:
@@ -60,14 +63,14 @@ public class Board_sem {
 		}
 	}
 	
-	static void read(ArrayList<HashMap<String, Object>> boardList){
+	static void read(ArrayList<HashMap<String, Object>> boardList){  //타입도 같이 써줘야함
 		System.out.print("게시글 번호 입력>");
-		String bn = ScanUtil.nextLine();
+		int boardNo = ScanUtil.nextInt();
 		
 		HashMap<String, Object> board = null;
 		for(int i = 0; i < boardList.size(); i++){
-			board = boardList.get(i);
-			if(board.get("board_no").equals(bn)){
+			if((Integer)boardList.get(i).get("board_no") == boardNo){
+				board = boardList.get(i);
 				break;
 			}
 		}
@@ -112,7 +115,7 @@ public class Board_sem {
 	
 	static void delete(ArrayList<HashMap<String, Object>> boardList, HashMap<String, Object> board){
 		for(int i = 0; i < boardList.size(); i++){
-			if(boardList.get(i).get("board_no").equals(board.get("board_no"))){
+			if(boardList.get(i).get("board_no") == board.get("board_no")){
 				boardList.remove(i);
 				System.out.println("삭제가 완료되었습니다.");
 				break;
@@ -121,8 +124,6 @@ public class Board_sem {
 	}
 
 	static void insert(ArrayList<HashMap<String, Object>> boardList){
-		System.out.print("번호>");
-		String boardNo = ScanUtil.nextLine();
 		System.out.print("제목>");
 		String title = ScanUtil.nextLine();
 		System.out.print("내용>");
@@ -130,8 +131,16 @@ public class Board_sem {
 		System.out.print("이름>");
 		String user = ScanUtil.nextLine();
 		
+		int maxBoardNo = 0;
+		for(int i = 0; i < boardList.size(); i++){
+			int boardNo = (Integer)boardList.get(i).get("board_no");
+			if(maxBoardNo < boardNo){
+				maxBoardNo = boardNo;
+			}
+		}
+		
 		HashMap<String, Object> temp = new HashMap<>();
-		temp.put("board_no", boardNo);
+		temp.put("board_no", maxBoardNo + 1);
 		temp.put("title", title);
 		temp.put("content", content);
 		temp.put("user", user);
