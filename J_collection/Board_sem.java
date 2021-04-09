@@ -54,7 +54,8 @@ public class Board_sem {
 			case 2:
 				insert(boardList);
 				break;
-				
+			
+		
 			case 0:
 				System.out.println("프로그램이 종료되었습니다.");
 				System.exit(0);
