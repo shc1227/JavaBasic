@@ -35,7 +35,7 @@ public class JDBC_SELECT {
 			int columnCount = metaDate.getColumnCount();
 			
 			for(int i=1;i<columnCount+1;i++){
-				System.out.print(metaDate.getColumnName(i)+"\t\t");
+				System.out.print(metaDate.getColumnName(i)+"    \t");
 			}
 			System.out.println();
 			
@@ -49,7 +49,6 @@ public class JDBC_SELECT {
 					System.out.print(value + "\t\t");
 				}
 				System.out.println();
-				System.out.println("---");
 				
 			}
 			
